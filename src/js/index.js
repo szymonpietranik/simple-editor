@@ -1,4 +1,4 @@
-import '../scss/main.scss';
+import "../scss/main.scss";
 
 // uncomment the lines below to enable PWA
 // import {registerSW} from './pwa.js';
@@ -6,4 +6,18 @@ import '../scss/main.scss';
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+console.log("HELLO 🚀");
+
+const loadBtn = document.querySelector(".btn__load--js");
+
+const saveBtn = document.querySelector(".btn__save--js");
+
+const textarea = document.querySelector(".editor__textarea--js");
+
+loadBtn.addEventListener("click", () => {
+  const loadBtn = document.querySelector(".btn__load--js");
+});
+
+saveBtn.addEventListener("click", () => {
+  const saveBtn = document.querySelector(".btn__save--js");
+});
