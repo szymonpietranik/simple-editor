@@ -8,16 +8,24 @@ import "../scss/main.scss";
 
 console.log("HELLO 🚀");
 
+const saveBtn = document.querySelector(".btn__save--js");
 const loadBtn = document.querySelector(".btn__load--js");
 
-const saveBtn = document.querySelector(".btn__save--js");
+const entry = localStorage.getItem("entry");
+let result = "";
+
+if (entry) {
+  result = entry;
+}
 
 const textarea = document.querySelector(".editor__textarea--js");
-
-loadBtn.addEventListener("click", () => {
-  const loadBtn = document.querySelector(".btn__load--js");
-});
+textarea.value = result;
 
 saveBtn.addEventListener("click", () => {
-  const saveBtn = document.querySelector(".btn__save--js");
+  localStorage.setItem("entry", textarea.value);
+});
+
+loadBtn.addEventListener("click", () => {
+  textarea.value = localStorage.getItem("entry");
+  console.log(123);
 });
